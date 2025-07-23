@@ -1,0 +1,7 @@
+[tools.opentofu]
+version = "1.8.3"
+backend = "aqua:opentofu/opentofu"
+
+[tools.task]
+version = "3.44.0"
+backend = "aqua:go-task/task"

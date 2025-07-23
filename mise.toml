@@ -1,0 +1,6 @@
+[settings]
+lockfile = true
+
+[tools]
+task = "latest"
+opentofu = "latest"
