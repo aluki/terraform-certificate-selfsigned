@@ -35,6 +35,7 @@ tasks:
       - tf_init
     sources:
       - "*.tf"
+      - .terraform.lock.hcl
     cmds:
       - tofu validate
 
@@ -44,6 +45,7 @@ tasks:
       - tf_validate
     sources:
       - "*.tf"
+      - .terraform.lock.hcl
       - "*.tftest.hcl"
       - "*.tftest.json"
       - "*.tofutest.hcl"
