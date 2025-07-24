@@ -11,5 +11,9 @@ tasks:
 
   init:
     desc: Initialises the project
+    sources:
+      - mise.toml
+    generates:
+      - mise.lock
     cmds:
-      - mise i
+      - mise install
