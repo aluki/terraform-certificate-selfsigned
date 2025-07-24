@@ -17,3 +17,39 @@ tasks:
       - mise.lock
     cmds:
       - mise install
+
+  tf_init:
+    desc: Initialises the Terraform project
+    deps:
+      - init
+    sources:
+      - versions.tf
+    generates:
+      - .terraform.lock.hcl
+    cmds:
+      - tofu init
+
+  tf_validate:
+    desc: Validates the Terraform project
+    deps:
+      - tf_init
+    sources:
+      - "*.tf"
+    cmds:
+      - tofu validate
+
+  test:
+    desc: Test the project
+    deps:
+      - tf_validate
+    sources:
+      - "*.tftest.hcl"
+      - "*.tftest.json"
+      - "*.tofutest.hcl"
+      - "*.tofutest.json"
+      - "tests/*.tftest.hcl"
+      - "tests/*.tftest.json"
+      - "tests/*.tofutest.hcl"
+      - "tests/*.tofutest.json"
+    cmds:
+      - tofu test
