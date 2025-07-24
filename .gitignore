@@ -1,3 +1,4 @@
 .task/
 .terraform/
 .terraform.tf*
+terraform.tfstate*
