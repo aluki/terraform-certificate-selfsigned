@@ -43,6 +43,7 @@ tasks:
     deps:
       - tf_validate
     sources:
+      - "*.tf"
       - "*.tftest.hcl"
       - "*.tftest.json"
       - "*.tofutest.hcl"
